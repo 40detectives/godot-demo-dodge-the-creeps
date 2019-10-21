@@ -1,11 +1,11 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://Scenes/Main.gd" type="Script" id=1]
-[ext_resource path="res://Scenes/Mob/Mob.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/Main.gd" type="Script" id=1]
+[ext_resource path="res://scenes/Mob/Mob.tscn" type="PackedScene" id=2]
 [ext_resource path="res://music/House In a Forest Loop.ogg" type="AudioStream" id=3]
 [ext_resource path="res://sounds/gameover.wav" type="AudioStream" id=4]
-[ext_resource path="res://Scenes/Player/Player.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Scenes/HUD/HUD.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/Player/Player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/HUD/HUD.tscn" type="PackedScene" id=6]
 
 [sub_resource type="Curve2D" id=1]
 _data = {
@@ -17,6 +17,10 @@ script = ExtResource( 1 )
 Mob = ExtResource( 2 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
 margin_right = 480.0
 margin_bottom = 720.0
 color = Color( 0.152941, 0.67451, 0.811765, 1 )
