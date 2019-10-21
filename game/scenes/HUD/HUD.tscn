@@ -1,7 +1,16 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://Scenes/HUD/HUD.gd" type="Script" id=1]
-[ext_resource path="res://Fonts/dynamicfont_Xolonium-Regular.tres" type="DynamicFont" id=2]
+[ext_resource path="res://scenes/HUD/HUD.gd" type="Script" id=1]
+[ext_resource path="res://fonts/dynamicfont_Xolonium-Regular.tres" type="DynamicFont" id=2]
+[ext_resource path="res://scenes/HUD/Button-HoverStyle.tres" type="StyleBox" id=3]
+[ext_resource path="res://scenes/HUD/Button-PressedStyle.tres" type="StyleBox" id=4]
+[ext_resource path="res://scenes/HUD/Button-NormalStyle.tres" type="StyleBox" id=5]
+
+[sub_resource type="InputEventAction" id=1]
+action = "ui_accept"
+
+[sub_resource type="ShortCut" id=2]
+shortcut = SubResource( 1 )
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource( 1 )
@@ -33,7 +42,11 @@ margin_left = -95.5
 margin_top = -200.0
 margin_right = 95.5
 margin_bottom = -100.0
+custom_styles/hover = ExtResource( 3 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/normal = ExtResource( 5 )
 custom_fonts/font = ExtResource( 2 )
+shortcut = SubResource( 2 )
 text = "Start"
 
 [node name="MessageTimer" type="Timer" parent="."]
