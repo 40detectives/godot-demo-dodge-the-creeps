@@ -52,8 +52,6 @@ func _on_MobTimer_timeout():
 	# Set the velocity (speed & direction)
 	mob.linear_velocity = Vector2(rand_range(mob.min_speed, mob.max_speed), 0)
 	mob.linear_velocity = mob.linear_velocity.rotated(direction)
-
-
-
-
+	# Connect the "_on_start_game" function to the signal "start_game" (which is emitted by HUD) 
+	$HUD.connect("start_game", mob, "_on_start_game")
 
